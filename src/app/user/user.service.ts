@@ -10,9 +10,9 @@ export class UserService {
       // throw new HttpException("Age should be more than zero", HttpStatus.OK)
         throw new BadRequestException("Age should be more than zero") // 400
     }
-    if(payload.name.length <= 1) {
-      throw new BadRequestException("Name should be more than one character") 
-    }
+    // if(payload.name.length <= 1) {
+    //   throw new BadRequestException("Name should be more than one character") 
+    // }
     this.users.push(payload);
     return payload;
   }
